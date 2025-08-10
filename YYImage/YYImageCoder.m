@@ -1280,7 +1280,7 @@ CFDataRef YYCGImageCreateEncodedWebPData(CGImageRef imageRef, BOOL lossless, CGF
     pictureNeedFree = YES;
     picture.width = (int)buffer.width;
     picture.height = (int)buffer.height;
-    picture.use_argb = lossless;
+    picture.use_argb = YES;
     if(!WebPPictureImportRGBA(&picture, buffer.data, (int)buffer.rowBytes)) goto fail;
     
     WebPMemoryWriterInit(&writer);
